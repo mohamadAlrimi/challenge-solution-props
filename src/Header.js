@@ -13,7 +13,10 @@ export default function Header() {
         boxShadow: "0px 5px 13px rgba(0,0,0, 0.4)",
       }}
     >
-      <h1>Elrimi Academy</h1>
+      <h1>Elrimi
+        
+        
+          Academy</h1>
     </div>
   );
 }
