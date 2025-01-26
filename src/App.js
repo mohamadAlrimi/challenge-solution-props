@@ -6,6 +6,22 @@ import Post from "./Post";
 import SideMenu from "./SideMenu";
 
 function App() {
+  const MyList = [
+    { id: 1, title: "do my home work" },
+    { id: 2, title: "do my home work2" },
+    { id: 3, title: "do my home work3" },
+    { id: 4, title: "do my home work4" },
+    { id: 5, title: "do my home work5" },
+  ];
+  const Tasks = MyList.map((task) => {
+    return (
+      <li key={task.id}>
+        {" "}
+        {task.id} <span>- </span>
+        {task.title}
+      </li>
+    );
+  });
   return (
     <div className="App">
       <Header />
@@ -26,6 +42,7 @@ function App() {
               <hr></hr>
               <p>أكاديمية مخصصة لتعليم البرمجة بمختلف لغاتها وتقنياتها</p>
             </Post>
+
             <Post>
               <>
                 <h1>hello World</h1>
@@ -33,11 +50,15 @@ function App() {
                 <p>this is the hello world artical</p>
               </>
             </Post>
-            <Post> <>
-             <h1>Post 3</h1>
-             <hr></hr>
-             <p>this is the body of post 3</p>
-             </></Post>
+            <Post>
+              {" "}
+              <>
+                <h1>Post 3</h1>
+                <hr></hr>
+                <p>this is the body of post 3</p>
+              </>
+            </Post>
+
             {/* <Post />
             <Post />
             <Post />
@@ -67,6 +88,19 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <div
+        style={{
+          background: "green",
+          margin: "150px",
+          width: "50%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {" "}
+        <ul> {Tasks}</ul>
+      </div>
     </div>
   );
 }
