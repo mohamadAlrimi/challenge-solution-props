@@ -6,6 +6,18 @@ import Post from "./Post";
 import SideMenu from "./SideMenu";
 
 function App() {
+  const MyPost=[
+    {id :1 ,title :"tis is the first "  , Ph:"this is the pharagraf for first post"},
+    {id :2 ,title :"tis is the second " ,Ph:"this is the pharagraf for second post"},
+    {id :3 ,title :"tis is the first "  , Ph:"this is the pharagraf for first post"},
+    {id :4 ,title :"tis is the second " ,Ph:"this is the pharagraf for second post"}
+  ]
+  const Posts= MyPost.map((post)=>{
+    return(<div key={post.id}> <h1>{post.title}</h1>
+    <hr></hr>
+    <p>{post.Ph}</p>
+    </div>)
+  })
   const MyList = [
     { id: 1, title: "do my home work" },
     { id: 2, title: "do my home work2" },
@@ -25,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+     
 
       {/* POSTS CONTAINER */}
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -88,11 +101,13 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <div style={{  border:"2px solid red",marginBottom:"20px", width:"50%" ,margin:"auto" ,height:"100%", justifyContent:"center" ,alignItems:"center"}}>
+        {Posts}</div>
       <div
         style={{
           background: "green",
-          margin: "150px",
-          width: "50%",
+       
+          width: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
