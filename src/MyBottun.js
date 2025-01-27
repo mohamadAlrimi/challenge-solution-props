@@ -4,12 +4,9 @@ export default function MyBottun() {
 //   const value =state[0];
 //   const setvalue =state[1];
   function buttonClick() {
-   if (name ==="muhammed")
-    setName("ahmmed")
-else
-setName("muhammed")
+  (name ==="muhammed" ? setName("ahmed"):setName("muhammed"))
+ 
   }
-
   return (
     <>
       <button onClick={buttonClick}>Click me</button>
