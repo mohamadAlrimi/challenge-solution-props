@@ -1,16 +1,19 @@
 import { useState } from "react";
 export default function MyBottun() {
-  const state = useState("muhammed");
-  const value =state[0];
-  const setvalue =state[1];
+  const [name , setName] = useState("muhammed");
+//   const value =state[0];
+//   const setvalue =state[1];
   function buttonClick() {
-    setvalue("Ahmed");
+   if (name ==="muhammed")
+    setName("ahmmed")
+else
+setName("muhammed")
   }
 
   return (
     <>
       <button onClick={buttonClick}>Click me</button>
-      <h1>{value}</h1>
+      <h1>{name}</h1>
     </>
   );
 }
