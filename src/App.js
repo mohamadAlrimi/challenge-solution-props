@@ -6,6 +6,7 @@ import Post from "./Post";
 import SideMenu from "./SideMenu";
 import MyBottun from "./MyBottun";
 import MyInput from "./MyInput";
+import MyForm from "./MyForm";
 
 function App() {
   const MyPost=[
@@ -41,6 +42,7 @@ function App() {
       <Header />
      <MyBottun/>
      <MyInput/>
+     <MyForm/>
 
       {/* POSTS CONTAINER */}
       <div style={{ display: "flex", justifyContent: "center" }}>
