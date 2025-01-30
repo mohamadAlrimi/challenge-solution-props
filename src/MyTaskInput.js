@@ -5,7 +5,7 @@ export default function MyTaskInput() {
       lastName: 'elrimi',
       score: 10,
     });
-  
+   
     function handlePlusClick() {
       setPlayer({
         ...player,

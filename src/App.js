@@ -8,6 +8,7 @@ import MyBottun from "./MyBottun";
 import MyInput from "./MyInput";
 import MyForm from "./MyForm";
 import MyTaskInput from "./MyTaskInput";
+import ArrayList from "./ArrayList";
 function App() {
   const MyPost=[
     {id :1 ,title :"tis is the first "  , Ph:"this is the pharagraf for first post"},
@@ -40,17 +41,18 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ArrayList/>
      <MyBottun/>
      <MyInput/>
      <MyForm/>
-     <MyTaskInput/>
+     <MyTaskInput/> 
 
       {/* POSTS CONTAINER */}
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div
           style={{ width: "60%", display: "flex", justifyContent: "center" }}
         >
-          {/* == POSTS CONTAINER == */}
+          == POSTS CONTAINER ==
           <div style={{ width: "70%" }}>
             <Post>
               {" "}
@@ -78,10 +80,10 @@ function App() {
               </>
             </Post>
 
-            {/* <Post />
             <Post />
             <Post />
-            <Post /> */}
+            <Post />
+            <Post />
           </div>
 
           <div style={{ width: "30%", marginTop: "25px" }}>
@@ -90,7 +92,7 @@ function App() {
         </div>
       </div>
 
-      {/* <header className="App-header">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to refresh.
@@ -106,7 +108,7 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
+      </header>
       <div style={{  border:"2px solid red",marginBottom:"20px", width:"50%" ,margin:"auto" ,height:"100%", justifyContent:"center" ,alignItems:"center"}}>
         {Posts}</div>
       <div
