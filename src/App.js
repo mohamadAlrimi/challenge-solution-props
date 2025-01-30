@@ -7,7 +7,7 @@ import SideMenu from "./SideMenu";
 import MyBottun from "./MyBottun";
 import MyInput from "./MyInput";
 import MyForm from "./MyForm";
-
+import MyTaskInput from "./MyTaskInput";
 function App() {
   const MyPost=[
     {id :1 ,title :"tis is the first "  , Ph:"this is the pharagraf for first post"},
@@ -43,6 +43,7 @@ function App() {
      <MyBottun/>
      <MyInput/>
      <MyForm/>
+     <MyTaskInput/>
 
       {/* POSTS CONTAINER */}
       <div style={{ display: "flex", justifyContent: "center" }}>

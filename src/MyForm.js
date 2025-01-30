@@ -1,17 +1,24 @@
 
 import { useState } from "react"
 export default function MyForm(){
-    const [formInput , setFormInput] = useState({name:"" ,email:"" ,age :""});
+    const [formInput , setFormInput] = useState({name:"" ,email:"" ,age :"" ,generalInfo :""});
 
     // if (!formInput.name || !formInput.email || !formInput.age) {
     //     alert("All fields are required!");
     //     return;
     //   }
-    return ( <>
-     <form style={{padding :"100px"}} onSubmit={(event)=>{
+    return ( <>  
+{/* ///////////////////////////////  */}
+
+
+
+
+ {/* //////////////////////////////////// */}
+
+     <form style={{padding :"100px" } } onSubmit={(event)=>{
         event.preventDefault();
         console.log(formInput)
-        setFormInput({ name: "", email: "", message: "" ,age :"" });
+        setFormInput({ name: "", email: "", message: "" ,age :"" ,generalInfo :""});
 
      }}>
         <label>Name:</label>
@@ -29,7 +36,15 @@ export default function MyForm(){
         <input value={formInput.age} onChange={(event) =>{
             setFormInput({...formInput , age : event.target.value});
         }}/>   <hr></hr>
-        <button  disabled={!formInput.name || !formInput.email || !formInput.age}>Submit</button>
+        <label>General Info </label>
+        <textarea value={formInput.generalInfo} 
+        onChange={(event)=>{
+            setFormInput({...formInput , generalInfo : event.target.value})
+        }}/>
+        <hr></hr>
+        <button 
+         disabled={!formInput.name || !formInput.email || !formInput.age}
+         >Submit</button>
         
         
         </form></>)
