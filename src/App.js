@@ -10,6 +10,7 @@ import MyForm from "./MyForm";
 import MyTaskInput from "./MyTaskInput";
 import ArrayList from "./ArrayList";
 import Count from "./Count";
+import Buy from "./Buy";
 function App() {
   const MyPost=[
     {id :1 ,title :"tis is the first "  , Ph:"this is the pharagraf for first post"},
@@ -42,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Buy/>
       <Count/>
       <ArrayList/>
      <MyBottun/>
