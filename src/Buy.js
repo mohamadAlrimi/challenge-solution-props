@@ -8,7 +8,7 @@ export default function Buy(){
         setPending((p)=>{
             return p + 1
         });
-        await wait(2000)
+        await wait(3000)
       
           setPending((p)=>{
             return p - 1
